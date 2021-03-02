@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="./styles/styles.css">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+
+</head>
+
+<body>
+  <div class="contentbox">
+
+    <div class="graphic">
+      <img class="fg" src="./images/illustration-woman-online-desktop.svg" alt="">
+      <img class="box" src="./images/illustration-box-desktop.svg" alt="">
+    </div>
+
+    <div class="text">
+      <h1>FAQ</h1>
+
+      <div class="qacontainer">
+        <div class="question">
+          <p>How many team members can I invite?</p>
+          <img src="./images/icon-arrow-down.svg" alt="">
+        </div>
+
+        <div class="answer">
+            <p>You can invite up to 2 additional users on the Free plan. There is no limit on 
+              team members for the Premium plan.</p>
+        </div>
+        <div class="seperator"></div>
+      </div>
+
+      <div class="qacontainer">
+        <div class="question">
+          <p>What is the maximum file upload size?</p>
+          <img src="./images/icon-arrow-down.svg" alt="">
+        </div>
+
+        <div class="answer">
+            <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
+        </div>
+        <div class="seperator"></div>
+      </div>
+
+      <div class="qacontainer">
+        <div class="question">
+          <p>How do I reset my password?</p>
+          <img src="./images/icon-arrow-down.svg" alt="">
+        </div>
+
+        <div class="answer">
+            <p>Click “Forgot password” from the login page or “Change password” from your profile page.
+              A reset link will be emailed to you.</p>
+        </div>
+        <div class="seperator"></div>
+      </div>
+
+      <div class="qacontainer">
+        <div class="question">
+          <p>Can I cancel my subscription?</p>
+          <img src="./images/icon-arrow-down.svg" alt="">
+        </div>
+
+        <div class="answer">
+            <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
+        </div>
+        <div class="seperator"></div>
+      </div>
+
+      <div class="qacontainer">
+        <div class="question">
+          <p>Do you provide additional support?</p>
+          <img src="./images/icon-arrow-down.svg" alt="">
+        </div>
+
+        <div class="answer">
+            <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+        </div>
+        <div class="seperator"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var acc = document.getElementsByClassName("question");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var answer = this.nextElementSibling;
+        if (answer.style.display === "block") {
+          answer.style.display = "none";
+          //this.style.color = "darkgrayishblue";
+          this.style.color = "hsl(240, 6%, 50%)";
+          this.style.fontWeight = "400";
+        } else {
+          answer.style.display = "block";
+          this.style.fontWeight = "700";
+          this.style.color = "black";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
